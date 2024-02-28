@@ -100,41 +100,41 @@ class Imageupload
                     //         $imageStatus = "The file has been uploaded successfully.";
                     //         session_start();
                     //         $_SESSION['imageStatus'] = $imageStatus;
-                    //         header("location:" . $this->basePath  . "/imageChange.php");
+                    //         header("location:" . $this->wkshopBasePath  . "/imageChange.php");
                     //         exit();
                     //     } else {
                     //         $imageStatus = "Data Not Updated!";
                     //         session_start();
                     //         $_SESSION['imageStatus'] = $imageStatus;
-                    //         header("location:" . $this->basePath  . "/imageChange.php");
+                    //         header("location:" . $this->wkshopBasePath  . "/imageChange.php");
                     //         exit();
                     //     }
                     // } else {
                     //     $imageStatus = "Something went wrong uploading!";
                     //     session_start();
                     //     $_SESSION['imageStatus'] = $imageStatus;
-                    //     header("location:" . $this->basePath  . "/imageChange.php");
+                    //     header("location:" . $this->wkshopBasePath  . "/imageChange.php");
                     //     exit();
                     // }
                 } else {
                     $imageStatus = "Image file size max 2 MB";
                     session_start();
                     $_SESSION['imageStatus'] = $imageStatus;
-                    header("location:" . $this->basePath  . "/imageChange.php");
+                    header("location:" . $this->wkshopBasePath  . "/imageChange.php");
                     exit();
                 }
             } else {
                 $imageStatus = 'Sorry, only JPG, JPEG, PNG, BMP,GIF, & PDF files are allowed to upload!';
                 session_start();
                 $_SESSION['imageStatus'] = $imageStatus;
-                header("location:" . $this->basePath  . "/imageChange.php");
+                header("location:" . $this->wkshopBasePath  . "/imageChange.php");
                 exit();
             }
         } else {
             $imageStatus = "Please select image..!";
             session_start();
             $_SESSION['imageStatus'] = $imageStatus;
-            header("location:" . $this->basePath  . "/imageChange.php");
+            header("location:" . $this->wkshopBasePath  . "/imageChange.php");
             exit();
         }
     }

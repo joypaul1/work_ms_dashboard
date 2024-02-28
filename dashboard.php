@@ -1,4 +1,4 @@
-<?php include_once('./_includes/header.php') ?>
+<?php include_once('./_helper/com_conn.php'); ?>
 
 <div class="container-scroller">
 	<div class="row p-0 m-0 proBanner" id="proBanner">

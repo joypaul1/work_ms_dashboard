@@ -1,6 +1,6 @@
 <?php
 session_start();
-$wkshopBasePath = $_SESSION['wkshopBasePath'];
+
 if (!isset($_SESSION['USER_WK_ADMIN'])) {
     $currentScriptPath = __FILE__;
     $directoryPath     = dirname($currentScriptPath);
@@ -10,6 +10,10 @@ if (!isset($_SESSION['USER_WK_ADMIN'])) {
     header("Location:" . $wkshopBasePath);
     exit;
 }
+echo $_SESSION['wkshopBasePath'];
+die();
+$wkshopBasePath =NULL;
+$wkshopBasePath = $_SESSION['wkshopBasePath'];
 include_once('../_config/connoracle.php');
 include_once('../_includes/header.php');
 include_once('../_includes/sidebar.php');

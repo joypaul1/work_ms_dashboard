@@ -17,7 +17,7 @@ if (isset($_POST['login_submit'])) {
 			unset($getUserRow['password']);
 			$_SESSION['USER_WK_ADMIN']   	= $getUserRow;
 			$_SESSION['baseUrl']     		= $baseUrl;
-			$_SESSION['basePath']    		= $basePath;
+			$_SESSION['wkshopBasePath']    		= $wkshopBasePath;
 			$_SESSION['rs_img_path'] 		= $rs_img_path;
 			header('location:dashboard.php');
 			exit;
