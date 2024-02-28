@@ -4,7 +4,7 @@ session_start();
 
 class Imageupload
 {
-    public $sfcmBasePath =  $_SESSION['sfcmBasePath'];
+    public $wkshopBasePath =  $_SESSION['wkshopBasePath'];
     public  $defaulPath = '../uploads/';
     public $extenstion = null;
     public $width = null;

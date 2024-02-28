@@ -6,10 +6,10 @@ if (!isset($_SESSION['USER_WK_ADMIN'])) {
     $includeFilePath   = $directoryPath . '../../../../config_file_path.php';
     $realIncludePath   = realpath($includeFilePath);
     require($includeFilePath);
-    header("Location:" . $sfcmBasePath);
+    header("Location:" . $wkshopBasePath);
     exit;
 }
-$sfcmBasePath = $_SESSION['sfcmBasePath'];
+$wkshopBasePath = $_SESSION['wkshopBasePath'];
 include_once('../../../../_includes/header.php');
 
 if ($_SESSION['USER_WK_ADMIN']['USER_TYPE'] == 'HOD') {

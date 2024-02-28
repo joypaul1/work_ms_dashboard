@@ -1,13 +1,13 @@
 <!-- base:js -->
-<script src="<?php echo $sfcmBasePath ?>/vendors/base/vendor.bundle.base.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/js/template.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/vendors/chart.js/Chart.min.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/vendors/progressbar.js/progressbar.min.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/vendors/chartjs-plugin-datalabels/chartjs-plugin-datalabels.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/vendors/justgage/raphael-2.1.4.min.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/vendors/justgage/justgage.js"></script>
-<script src="<?php echo $sfcmBasePath ?>/js/jquery.cookie.js" type="text/javascript"></script>
-<script src="<?php echo $sfcmBasePath ?>/js/dashboard.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/base/vendor.bundle.base.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/js/template.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/chart.js/Chart.min.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/progressbar.js/progressbar.min.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/chartjs-plugin-datalabels/chartjs-plugin-datalabels.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/justgage/raphael-2.1.4.min.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/vendors/justgage/justgage.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="<?php echo $wkshopBasePath ?>/js/dashboard.js"></script>
 <!-- End custom js for this page-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.min.js" integrity="sha512-7x7HoEikRZhV0FAORWP+hrUzl75JW/uLHBbg2kHnPdFmScpIeHY0ieUVSacjusrKrlA/RsA2tDOBvisFmKc3xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -20,7 +20,7 @@
         }
     });
 </script>
-<script src="<?php echo $sfcmBasePath ?>/assets/js/app.js"></script>
+<script src="<?php echo $wkshopBasePath ?>/assets/js/app.js"></script>
 <?php if (isset($dynamic_link_js) && count($dynamic_link_js) > 0) {
     foreach ($dynamic_link_js as $key => $linkJs) {
         echo "<script src='$linkJs'></script>";
