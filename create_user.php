@@ -16,77 +16,7 @@
 							<i class="mdi mdi-cloud-download btn-icon-append"></i>
 						</button>
 					</span>
-					<div class="table-responsive pt-3">
-						<table class="table table-primarys table-bordered" id="downloadData">
-							<thead class="cust-table-head">
-								<tr>
-									<th scope="col">Sl</th>
-									<th scope="col">Login User ID</th>
-									<th scope="col">User Name</th>
-									<th scope="col">Last Login Date</th>
-									<th scope="col">Area Zone</th>
-									<th scope="col">Mobile</th>
-									<th scope="col">Create Date</th>
-									<th scope="col">Created By</th>
-									<th scope="col">Remarks</th>
-									<th scope="col">User Status</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php
-								//$emp_id = $_SESSION['emp_id'];
-
-
-								$strSQL  = oci_parse(
-									$objConnect,
-									"SELECT A.ID,
-						                    EMP_NAME,
-											RML_ID,
-						                    (SELECT MAX(B.SESSTION_TIME) FROM HR_APPS_USER_SESSION B WHERE B.RML_COLL_APPS_USER_ID=A.ID) LAST_LOGIN,
-						                    IS_ACTIVE,
-											MOBILE_NO,
-											CREATED_DATE,
-											AREA_ZONE,
-											REMARKS,
-											UPDATED_BY
-									FROM  RML_COLL_APPS_USER A
-									WHERE ACCESS_APP='RML_WSHOP' 
-									ORDER BY IS_ACTIVE"
-								);
-								oci_execute($strSQL);
-								$number = 0;
-
-
-								while ($row = oci_fetch_assoc($strSQL)) {
-									$number++;
-								?>
-									<tr>
-										<td><?php echo $number; ?></td>
-										<td><?php echo $row['RML_ID']; ?></td>
-										<td><?php echo $row['EMP_NAME']; ?></td>
-
-										<td><?php echo $row['LAST_LOGIN']; ?></td>
-										<td><?php echo $row['AREA_ZONE']; ?></td>
-										<td><?php echo $row['MOBILE_NO']; ?></td>
-										<td><?php echo $row['CREATED_DATE']; ?></td>
-										<td><?php echo $row['UPDATED_BY']; ?></td>
-										<td><?php echo $row['REMARKS']; ?></td>
-										<td class="text-center">
-											<?php if ($row['IS_ACTIVE']) {
-												echo '<button type="button" class="btn btn-success btn-rounded btn-fw text-white">Active</button>';
-											} else {
-												echo '<button type="button" class="btn btn-danger btn-rounded btn-fw text-white">Deactive</button>';
-											} ?>
-										</td>
-
-									</tr>
-								<?php
-
-								}
-								?>
-							</tbody>
-						</table>
-					</div>
+				
 				</div>
 			</div>
 		</div>
