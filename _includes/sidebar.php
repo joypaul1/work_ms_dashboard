@@ -14,7 +14,7 @@
         <div class="container">
             <ul class="nav page-navigation">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="<?php echo $wkshopBasePath ?>/dashboard.php">
                         <i class="mdi mdi-home-assistant menu-icon"></i>
                         <span class="menu-title">Dashboard</span>
                     </a>
@@ -33,21 +33,21 @@
                     </div>
                 </li> -->
                 <li class="nav-item">
-                    <a href="<?php echo $wkshopBasePath ?>/" class="nav-link">
+                    <a href="<?php echo $wkshopBasePath ?>/search_update.php"class="nav-link">
                         <i class="mdi mdi-database-search menu-icon"></i>
                         <span class="menu-title">Search & Update User </span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/charts/chartjs.html" class="nav-link">
+                    <a href="<?php echo $wkshopBasePath ?>/list_of_user.php" class="nav-link">
                         <i class="mdi mdi-format-list-bulleted-type menu-icon"></i>
                         <span class="menu-title">List Of User</span>
                         <i class="menu-arrow"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/tables/basic-table.html" class="nav-link">
+                    <a href="<?php echo $wkshopBasePath ?>/create_user.php" class="nav-link">
                         <i class="mdi mdi-pen-plus menu-icon"></i>
                         <span class="menu-title">Create User </span>
                         <i class="menu-arrow"></i>

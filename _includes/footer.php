@@ -1,3 +1,17 @@
+<!-- partial:partials/_footer.html -->
+<footer class="footer">
+    <div class="footer-wrap">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="#" class="text-primary fw-bold">RMWL </a> <?= date('Y') ?></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">If you encounter or experience any kind of problem, please feel free to contact the <a href="#" class="text-primary fw-bold"> RML-IT TEAM</a> for assistance.</span>
+        </div>
+    </div>
+</footer>
+<!-- partial -->
+</div>
+<!-- main-panel ends -->
+</div>
+<!-- page-body-wrapper ends -->
 </div>
 <!-- container-scroller -->
 <!-- base:js -->
