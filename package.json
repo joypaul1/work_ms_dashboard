@@ -1,8 +1,7 @@
 {
-  "name": "Kapella_admin",
+  "name": "WORKSHOP_RWML",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
+  "main": "index.php",
   "dependencies": {
     "@mdi/font": "^3.8.95",
     "bootstrap": "^5.1.3",
@@ -38,10 +37,13 @@
     "run-sequence": "^2.2.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass --watch scss/ -o css/"
   },
   "author": "bootstrapdash",
   "url": "http://www.bootstrapdash.com/",
   "copyright": "",
-  "license": ""
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
 }

@@ -8,7 +8,7 @@
                         <li class="nav-item ms-0 me-5 d-lg-flex d-none">
                             <a href="#" class="nav-link horizontal-nav-left-menu"><i class="mdi mdi-format-list-bulleted"></i></a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                                 <i class="mdi mdi-bell mx-0"></i>
                                 <span class="count bg-success">2</span>
@@ -113,47 +113,26 @@
                                 </div>
                                 <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="search">
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
-                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo" href="<?php echo $wkshopBasePath ?>/dashboard.php"><img src="<?php echo $wkshopBasePath ?>/images/workshop.png" alt="logo" style="height:70px!important" /></a>
+                        <a class="navbar-brand brand-logo-mini" ref="<?php echo $wkshopBasePath ?>/dashboard.php"><img src="<?php echo $wkshopBasePath ?>/images/workshop.png" alt="logo" /></a>
                     </div>
                     <ul class="navbar-nav navbar-nav-right">
-                        <li class="nav-item dropdown  d-lg-flex d-none">
-                            <button type="button" class="btn btn-inverse-primary btn-sm">Product </button>
-                        </li>
-                        <li class="nav-item dropdown d-lg-flex d-none">
-                            <a class="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown">
-                                Reports
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown">
-                                <p class="mb-0 font-weight-medium float-left dropdown-header">Reports</p>
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-file-pdf text-primary"></i>
-                                    Pdf
-                                </a>
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-file-excel text-primary"></i>
-                                    Exel
-                                </a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown d-lg-flex d-none">
-                            <button type="button" class="btn btn-inverse-primary btn-sm">Settings</button>
-                        </li>
+
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                                <span class="nav-profile-name">Johnson</span>
+                                <span class="nav-profile-name"><?php echo $_SESSION['USER_WK_ADMIN']['name'] ?></span>
                                 <span class="online-status"></span>
-                                <img src="images/faces/face28.png" alt="profile" />
+                                <img src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="profile" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                                 <a class="dropdown-item">
                                     <i class="mdi mdi-settings text-primary"></i>
                                     Settings
                                 </a>
-                                <a class="dropdown-item">
+                                <a href="<?php echo $wkshopBasePath ?>/index.php?logout_hr=true" class="dropdown-item">
                                     <i class="mdi mdi-logout text-primary"></i>
                                     Logout
                                 </a>

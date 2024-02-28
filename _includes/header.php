@@ -11,9 +11,9 @@
     <meta http-equiv="expires" content="0">
     <!--favicon-->
     <link rel="icon" href="<?php echo $wkshopBasePath ?>/assets/images/favicon-32x32.png" type="image/png">
-    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/vendors/base/vendor.bundle.base.css">
-    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/vendors/mdi/css/materialdesignicons.min.css?v=1">
+    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/vendors/base/vendor.bundle.base.css?v=1">
+    <link rel="stylesheet" href="<?php echo $wkshopBasePath ?>/css/style.css?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.8/sweetalert2.min.css" integrity="sha512-y4S4cBeErz9ykN3iwUC4kmP/Ca+zd8n8FDzlVbq5Nr73gn1VBXZhpriQ7avR+8fQLpyq4izWm0b8s6q4Vedb9w==" crossorigin="anonymous" referrerpolicy="no-referrer">

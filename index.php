@@ -16,7 +16,6 @@ if (isset($_POST['login_submit'])) {
 			$getUserRow = mysqli_fetch_assoc($rs);
 			unset($getUserRow['password']);
 			$_SESSION['USER_WK_ADMIN']   	= $getUserRow;
-			$_SESSION['wkshopbaseUrl']      = $wkshopbaseUrl;
 			$_SESSION['wkshopBasePath']     = $wkshopBasePath;
 			$_SESSION['rs_img_path'] 		= $rs_img_path;
 			header('location:dashboard.php');
@@ -27,17 +26,19 @@ if (isset($_POST['login_submit'])) {
 	}
 }
 
-if (isset($_GET['logout']) && $_GET['logout'] == true) {
-	session_destroy();
-	header("location:index.php");
-	exit;
+if (isset($_GET['logout_hr']) && $_GET['logout_hr'] == true) {
+    $wkshopBasePath    = $_SESSION['wkshopBasePath'];
+    session_start();
+    session_unset();
+    session_destroy();
+    session_write_close();
+    setcookie(session_name(), '', 0, '/');
+    session_regenerate_id(true);
+    header("location:" . $wkshopBasePath . "/index.php");
+    exit;
 }
 
-
-if (isset($_GET['lmsg']) && $_GET['lmsg'] == true) {
-	$errorMsg = "Login required to access dashboard";
-}
-
+?>
 
 ?>
 
