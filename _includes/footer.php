@@ -1,3 +1,5 @@
+</div>
+<!-- container-scroller -->
 <!-- base:js -->
 <script src="<?php echo $wkshopBasePath ?>/vendors/base/vendor.bundle.base.js"></script>
 <script src="<?php echo $wkshopBasePath ?>/js/template.js"></script>

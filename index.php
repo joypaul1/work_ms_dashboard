@@ -16,7 +16,7 @@ if (isset($_POST['login_submit'])) {
 			$getUserRow = mysqli_fetch_assoc($rs);
 			unset($getUserRow['password']);
 			$_SESSION['USER_WK_ADMIN']   	= $getUserRow;
-			$_SESSION['wkshopbaseUrl']     		= $wkshopbaseUrl;
+			$_SESSION['wkshopbaseUrl']      = $wkshopbaseUrl;
 			$_SESSION['wkshopBasePath']     = $wkshopBasePath;
 			$_SESSION['rs_img_path'] 		= $rs_img_path;
 			header('location:dashboard.php');

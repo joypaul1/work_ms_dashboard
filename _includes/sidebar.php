@@ -10,101 +10,78 @@
         return strpos($currentUrl, $url) !== false ? 'mm-active' : '';
     }
     ?>
-    <!--wrapper-->
-    <div class="wrapper">
-
-        <!--sidebar wrapper -->
-        <div class="sidebar-wrapper" data-simplebar="true">
-            <div class="sidebar-header">
-                <!-- <div>
-                    <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-                </div> -->
-                <div>
-                    <h4 class="logo-text">WORKSHOP - SYSTEM</h4>
-                </div>
-                <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
-                </div>
-            </div>
-            <!--navigation-->
-            <ul class="metismenu" id="menu">
-                <li class="<?php echo isActive('/home/dashboard.php'); ?>">
-                    <a href="<?php echo $wkshopBasePath ?>/home/dashboard.php">
-                        <div class="parent-icon"><i class="bx bx-home-circle"></i>
-                        </div>
-                        <div class="menu-title">Dashboard </div>
+    <nav class="bottom-navbar">
+        <div class="container">
+            <ul class="nav page-navigation">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="mdi mdi-file-document-box menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
                     </a>
                 </li>
-
-
-                <li class="<?php echo isActive('/collection_module/view/edit.php'); ?>">
-                    <a href="javascript:;" class="has-arrow">
-
-                        <div class="parent-icon"><i class='bx bx-money'></i>
-                        </div>
-                        <div class="menu-title">Collection Module</div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="mdi mdi-cube-outline menu-icon"></i>
+                        <span class="menu-title">UI Elements</span>
+                        <i class="menu-arrow"></i>
                     </a>
-                    <ul>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/collection_module/view/create.php"><i class='bx bxs-arrow-to-right'></i> Create Collection </a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/collection_module/view/excel_upload.php"><i class='bx bxs-arrow-to-right'></i> Excel Upload </a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/collection_module/view/index.php"><i class='bx bxs-arrow-to-right'></i> List Of Collection </a>
-                        </li>
-                    </ul>
+                    <div class="submenu">
+                        <ul>
+                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="<?php echo isActive('/visit_module/view/edit.php'); ?>">
-                    <a href="javascript:;" class="has-arrow">
-
-                        <div class="parent-icon"><i class='bx bx-group'></i>
-                        </div>
-                        <div class="menu-title">Visit Module</div>
+                <li class="nav-item">
+                    <a href="pages/forms/basic_elements.html" class="nav-link">
+                        <i class="mdi mdi-chart-areaspline menu-icon"></i>
+                        <span class="menu-title">Form Elements</span>
+                        <i class="menu-arrow"></i>
                     </a>
-                    <ul>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/visit_module/view/create.php"><i class='bx bxs-arrow-to-right'></i> Create Visit </a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/visit_module/view/index.php"><i class='bx bxs-arrow-to-right'></i> List Of Visit </a>
-                        </li>
-                    </ul>
                 </li>
-                <li class="<?php echo isActive('/user_module/view/edit.php'); ?>">
-                    <a href="javascript:;" class="has-arrow">
-
-                        <div class="parent-icon"><i class='bx bx-group'></i>
-                        </div>
-                        <div class="menu-title">User Module</div>
+                <li class="nav-item">
+                    <a href="pages/charts/chartjs.html" class="nav-link">
+                        <i class="mdi mdi-finance menu-icon"></i>
+                        <span class="menu-title">Charts</span>
+                        <i class="menu-arrow"></i>
                     </a>
-                    <ul>
-                        <!-- <li> <a href="<?php echo $wkshopBasePath ?>/user_module/view/create.php"><i class='bx bxs-arrow-to-right'></i> Create User</a>
-                        </li> -->
-                        <li> <a href="<?php echo $wkshopBasePath ?>/user_module/view/index.php"><i class='bx bxs-arrow-to-right'></i> List Of User</a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/user_module/view/brandAssign.php"><i class='bx bxs-arrow-to-right'></i> Brand Assign</a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/user_module/view/resource_allocation.php"><i class='bx bxs-arrow-to-right'></i> Resource Allocation </a>
-                        </li>
-                    </ul>
                 </li>
-                <li class="<?php echo isActive('/admin_module/view/ut_edit.php'); ?> <?php echo isActive('/admin_module/view/vt_edit.php'); ?> <?php echo isActive('/admin_module/view/dis_create.php'); ?>
-                <?php echo isActive('/admin_module/view/dis_edit.php'); ?>">
-                    <a href="javascript:;" class="has-arrow">
-
-                        <div class="parent-icon"><i class='bx bx-cog'></i>
-                        </div>
-                        <div class="menu-title">Admin Module</div>
+                <li class="nav-item">
+                    <a href="pages/tables/basic-table.html" class="nav-link">
+                        <i class="mdi mdi-grid menu-icon"></i>
+                        <span class="menu-title">Tables</span>
+                        <i class="menu-arrow"></i>
                     </a>
-                    <ul>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/admin_module/view/user_type.php"><i class='bx bxs-arrow-to-right'></i> User Type Config.</a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/admin_module/view/visit_type.php"><i class='bx bxs-arrow-to-right'></i> Visit Type Config.</a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/admin_module/view/plaza_retailer_type.php"><i class='bx bxs-arrow-to-right'></i> Plaza Retailer Type </a>
-                        </li>
-                        <li> <a href="<?php echo $wkshopBasePath ?>/admin_module/view/disctrict.php"><i class='bx bxs-arrow-to-right'></i> Districts Name Config.</a>
-                        </li> 
-                    </ul>
                 </li>
-
+                <li class="nav-item">
+                    <a href="pages/icons/mdi.html" class="nav-link">
+                        <i class="mdi mdi-emoticon menu-icon"></i>
+                        <span class="menu-title">Icons</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="mdi mdi-codepen menu-icon"></i>
+                        <span class="menu-title">Sample Pages</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="submenu">
+                        <ul class="submenu-item">
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/login.html">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/login-2.html">Login 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/register.html">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/register-2.html">Register 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/lock-screen.html">Lockscreen</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="docs/documentation.html" class="nav-link">
+                        <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                        <span class="menu-title">Documentation</span></a>
+                </li>
             </ul>
-            <!--end navigation-->
         </div>
-        <!--end sidebar wrapper -->
+    </nav>
+    </div>

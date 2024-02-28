@@ -1,208 +1,169 @@
 <!--start header -->
-<header>
-    <div class="topbar d-flex align-items-center">
-        <nav class="navbar navbar-expand">
-            <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
-            </div>
-            <div class="search-bar flex-grow-1">
-                <div class="position-relative search-bar-box">
-                    <input type="text" class="form-control search-control" placeholder="Type to search..."> <span class="position-absolute top-50 search-show translate-middle-y"><i class='bx bx-search'></i></span>
-                    <span class="position-absolute top-50 search-close translate-middle-y"><i class='bx bx-x'></i></span>
-                </div>
-            </div>
-            <div class="top-menu ms-auto">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item mobile-search-icon">
-                        <a class="nav-link" href="#"> <i class='bx bx-search'></i>
-                        </a>
-                    </li>
-                    <?php if ($_SESSION['USER_WK_ADMIN']['USER_TYPE'] == "HOD") { ?>
-                        <li class="nav-item dropdown dropdown-large">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class='bx bx-category'></i>
+<div class="container-scroller">
+    <div class="horizontal-menu">
+        <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+            <div class="container-fluid">
+                <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav navbar-nav-left">
+                        <li class="nav-item ms-0 me-5 d-lg-flex d-none">
+                            <a href="#" class="nav-link horizontal-nav-left-menu"><i class="mdi mdi-format-list-bulleted"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                                <i class="mdi mdi-bell mx-0"></i>
+                                <span class="count bg-success">2</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <div class="row row-cols-3 g-3 p-3">
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-cosmic text-white"><i class='bx bx-group'></i>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                                <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-success">
+                                            <i class="mdi mdi-information mx-0"></i>
                                         </div>
-                                        <div class="app-title">Visit </div>
                                     </div>
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-burning text-white"><i class='bx bx-atom'></i>
+                                    <div class="preview-item-content">
+                                        <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                                        <p class="font-weight-light small-text mb-0 text-muted">
+                                            Just now
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-warning">
+                                            <i class="mdi mdi-settings mx-0"></i>
                                         </div>
-                                        <div class="app-title">Collection</div>
                                     </div>
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-lush text-white"><i class='bx bx-shield'></i>
+                                    <div class="preview-item-content">
+                                        <h6 class="preview-subject font-weight-normal">Settings</h6>
+                                        <p class="font-weight-light small-text mb-0 text-muted">
+                                            Private message
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-info">
+                                            <i class="mdi mdi-account-box mx-0"></i>
                                         </div>
-                                        <div class="app-title">Order</div>
                                     </div>
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-kyoto text-dark"><i class='bx bx-notification'></i>
-                                        </div>
-                                        <div class="app-title">User</div>
+                                    <div class="preview-item-content">
+                                        <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                                        <p class="font-weight-light small-text mb-0 text-muted">
+                                            2 days ago
+                                        </p>
                                     </div>
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-blues text-dark"><i class='bx bx-file'></i>
-                                        </div>
-                                        <div class="app-title">Notification</div>
-                                    </div>
-                                    <div class="col text-center">
-                                        <div class="app-box mx-auto bg-gradient-moonlit text-white"><i class='bx bxs-user-detail'></i>
-                                        </div>
-                                        <div class="app-title">Profile</div>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
                         </li>
-                    <?php } ?>
-
-                    <!-- <li class="nav-item dropdown dropdown-large">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">7</span>
-                            <i class='bx bx-bell'></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a href="javascript:;">
-                                <div class="msg-header">
-                                    <p class="msg-header-title">Notifications</p>
-                                    <p class="msg-header-clear ms-auto">Marks all as read</p>
-                                </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
+                                <i class="mdi mdi-email mx-0"></i>
+                                <span class="count bg-primary">4</span>
                             </a>
-                            <div class="header-notifications-list">
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-primary text-primary"><i class="bx bx-group"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
-                                                    ago</span></h6>
-                                            <p class="msg-info">5 new user registered</p>
-                                        </div>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                                <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                                    </div>
+                                    <div class="preview-item-content flex-grow">
+                                        <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                                        </h6>
+                                        <p class="font-weight-light small-text text-muted mb-0">
+                                            The meeting is cancelled
+                                        </p>
                                     </div>
                                 </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-danger text-danger"><i class="bx bx-cart-alt"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
-                                                    ago</span></h6>
-                                            <p class="msg-info">You have recived new orders</p>
-                                        </div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                                    </div>
+                                    <div class="preview-item-content flex-grow">
+                                        <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                                        </h6>
+                                        <p class="font-weight-light small-text text-muted mb-0">
+                                            New product launch
+                                        </p>
                                     </div>
                                 </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-success text-success"><i class="bx bx-file"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
-                                                    ago</span></h6>
-                                            <p class="msg-info">The pdf files generated</p>
-                                        </div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
                                     </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-warning text-warning"><i class="bx bx-send"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">Time Response <span class="msg-time float-end">28 min
-                                                    ago</span></h6>
-                                            <p class="msg-info">5.1 min avarage time response</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-info text-info"><i class="bx bx-home-circle"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">New Product Approved <span class="msg-time float-end">2 hrs ago</span></h6>
-                                            <p class="msg-info">Your new product has approved</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-danger text-danger"><i class="bx bx-message-detail"></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
-                                                    ago</span></h6>
-                                            <p class="msg-info">New customer comments recived</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-success text-success"><i class='bx bx-check-square'></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5 hrs
-                                                    ago</span></h6>
-                                            <p class="msg-info">Successfully shipped your item</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-primary text-primary"><i class='bx bx-user-pin'></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">New 24 authors<span class="msg-time float-end">1 day
-                                                    ago</span></h6>
-                                            <p class="msg-info">24 new authors joined last week</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item" href="javascript:;">
-                                    <div class="d-flex align-items-center">
-                                        <div class="notify bg-light-warning text-warning"><i class='bx bx-door-open'></i>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks
-                                                    ago</span></h6>
-                                            <p class="msg-info">45% less alerts last 4 weeks</p>
-                                        </div>
+                                    <div class="preview-item-content flex-grow">
+                                        <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                                        </h6>
+                                        <p class="font-weight-light small-text text-muted mb-0">
+                                            Upcoming board meeting
+                                        </p>
                                     </div>
                                 </a>
                             </div>
-                            <a href="javascript:;">
-                                <div class="text-center msg-footer">View All Notifications</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown dropdown-large">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <span class="alert-count">8</span>
-                            <i class='bx bx-comment'></i>
-                        </a>
-
-                    </li> -->
-                </ul>
-            </div>
-            <div class="user-box dropdown">
-                <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-                    <img src="<?php echo $_SESSION['USER_WK_ADMIN']['IMAGE_LINK'] != null ? ($wkshopBasePath . '/' . $_SESSION['USER_WK_ADMIN']['IMAGE_LINK']) : $wkshopBasePath . '/' . "assets/images/avatars/default_user.png"; ?>" class="user-img" alt="">
-                    <div class="user-info ps-3">
-                        <p class="user-name mb-0">
-                            <?php echo $_SESSION['USER_WK_ADMIN']['USER_NAME'] ?>
-                        </p>
-
-                        <p class="designattion mb-0 fw-bold"><?php echo $_SESSION['USER_WK_ADMIN']['USER_TYPE'] ?></p>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link count-indicator "><i class="mdi mdi-message-reply-text"></i></a>
+                        </li>
+                        <li class="nav-item nav-search d-none d-lg-block ms-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="search">
+                                        <i class="mdi mdi-magnify"></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="search" aria-label="search" aria-describedby="search">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a>
                     </div>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="<?php echo $wkshopBasePath . '/user_module/view/profile.php?id=' . $_SESSION['USER_WK_ADMIN']['ID'] . '&actionType=profileEdit' ?>"><i class="bx bx-user"></i><span>Profile</span></a>
-                    </li>
-
-                    <li>
-                        <a class="dropdown-item" href="<?php echo $wkshopBasePath ?>/index.php?logout_hr=true"><i class='bx bx-log-out-circle'></i><span>Logout</span></a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item dropdown  d-lg-flex d-none">
+                            <button type="button" class="btn btn-inverse-primary btn-sm">Product </button>
+                        </li>
+                        <li class="nav-item dropdown d-lg-flex d-none">
+                            <a class="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown">
+                                Reports
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown">
+                                <p class="mb-0 font-weight-medium float-left dropdown-header">Reports</p>
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-file-pdf text-primary"></i>
+                                    Pdf
+                                </a>
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-file-excel text-primary"></i>
+                                    Exel
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown d-lg-flex d-none">
+                            <button type="button" class="btn btn-inverse-primary btn-sm">Settings</button>
+                        </li>
+                        <li class="nav-item nav-profile dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                                <span class="nav-profile-name">Johnson</span>
+                                <span class="online-status"></span>
+                                <img src="images/faces/face28.png" alt="profile" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-settings text-primary"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-logout text-primary"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                </div>
             </div>
         </nav>
-    </div>
-</header>
-<!--end header -->
+        <!--end header -->

@@ -10,10 +10,9 @@ if (!isset($_SESSION['USER_WK_ADMIN'])) {
     header("Location:" . $wkshopBasePath);
     exit;
 }
-echo $_SESSION['wkshopBasePath'];
-die();
 
-include_once('../_config/connoracle.php');
-include_once('../_includes/header.php');
-include_once('../_includes/sidebar.php');
-include_once('../_includes/top_header.php');
+include_once('./_config/sqlConfig.php');
+include_once('./_config/connoracleConfig.php');
+include_once('./_includes/header.php');
+include_once('./_includes/top_header.php');
+include_once('./_includes/sidebar.php');
