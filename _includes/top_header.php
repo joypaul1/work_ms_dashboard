@@ -16,7 +16,7 @@
                         <a class="nav-link" href="#"> <i class='bx bx-search'></i>
                         </a>
                     </li>
-                    <?php if ($_SESSION['USER_SFCM_INFO']['USER_TYPE'] == "HOD") { ?>
+                    <?php if ($_SESSION['USER_WK_ADMIN']['USER_TYPE'] == "HOD") { ?>
                         <li class="nav-item dropdown dropdown-large">
                             <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class='bx bx-category'></i>
                             </a>
@@ -184,17 +184,17 @@
             <div class="user-box dropdown">
                 <a class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <img src="<?php echo $_SESSION['USER_SFCM_INFO']['IMAGE_LINK'] != null ? ($sfcmBasePath . '/' . $_SESSION['USER_SFCM_INFO']['IMAGE_LINK']) : $sfcmBasePath . '/' . "assets/images/avatars/default_user.png"; ?>" class="user-img" alt="">
+                    <img src="<?php echo $_SESSION['USER_WK_ADMIN']['IMAGE_LINK'] != null ? ($sfcmBasePath . '/' . $_SESSION['USER_WK_ADMIN']['IMAGE_LINK']) : $sfcmBasePath . '/' . "assets/images/avatars/default_user.png"; ?>" class="user-img" alt="">
                     <div class="user-info ps-3">
                         <p class="user-name mb-0">
-                            <?php echo $_SESSION['USER_SFCM_INFO']['USER_NAME'] ?>
+                            <?php echo $_SESSION['USER_WK_ADMIN']['USER_NAME'] ?>
                         </p>
 
-                        <p class="designattion mb-0 fw-bold"><?php echo $_SESSION['USER_SFCM_INFO']['USER_TYPE'] ?></p>
+                        <p class="designattion mb-0 fw-bold"><?php echo $_SESSION['USER_WK_ADMIN']['USER_TYPE'] ?></p>
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="<?php echo $sfcmBasePath . '/user_module/view/profile.php?id=' . $_SESSION['USER_SFCM_INFO']['ID'] . '&actionType=profileEdit' ?>"><i class="bx bx-user"></i><span>Profile</span></a>
+                    <li><a class="dropdown-item" href="<?php echo $sfcmBasePath . '/user_module/view/profile.php?id=' . $_SESSION['USER_WK_ADMIN']['ID'] . '&actionType=profileEdit' ?>"><i class="bx bx-user"></i><span>Profile</span></a>
                     </li>
 
                     <li>
