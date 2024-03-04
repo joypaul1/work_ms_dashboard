@@ -3,23 +3,54 @@
 
 <div class="content-wrapper">
 	<div class="row">
-		<div class="col-sm-12 grid-margin stretch-card">
+		<div class="col-12 grid-margin stretch-card">
 			<div class="card">
+				<div class="card-header text-danger fw-bold text-center text-uppercase">
+					<i class="mdi mdi-alert menu-icon"></i> You will be respondible if you update anything here. <i class="mdi mdi-alert menu-icon"></i>
+				</div>
 				<div class="card-body">
-					<span class="d-flex align-items-center justify-content-between">
 
-						<h4 class="card-title">
-							<i class="mdi mdi-database-search menu-icon"></i> LIST OF APPS USER
-						</h4>
-						<button type="button" class="btn btn-primary btn-icon-text" id="exportButton" onclick="exportF(this)">
-							Export To Excel
-							<i class="mdi mdi-cloud-download btn-icon-append"></i>
-						</button>
-					</span>
-				
+
+					<form action="<?php echo $wkshopBasePath . "/action/self_panel.php"; ?>" method="post" class="d-flex align-items-center justify-content-center  gap-3 ">
+						<div class="row">
+							<input type="hidden" name="actionType" value="create">
+							<div class="col-3">
+								<label for="form_rml_id" class="form-label">Emp ID :<span class="text-danger">*</span> </label>
+								<input type="text" class="form-control form-control-sm" id="form_rml_id" name="form_rml_id" required>
+							</div>
+							<div class="col-3">
+								<label for="emp_form_name" class="form-label"> Full Name : <span class="text-danger">*</span> </label>
+								<input type="text" class="form-control form-control-sm" placeholder="Official Name" id="emp_form_name" name="emp_form_name" required>
+							</div>
+							<div class="col-3">
+								<label for="emp_mobile" class="form-label"> Mobile No : <span class="text-danger">*</span> </label>
+								<input type="number" class="form-control form-control-sm" placeholder="Official Mobile Number" id="emp_mobile" name="emp_mobile" required>
+							</div>
+							<div class="col-3">
+								<label for="workshop_name" class="form-label"> Workshoop Name : <span class="text-danger">*</span> </label>
+								<input type="text" class="form-control form-control-sm" placeholder="workshop_name" id="workshop_name" name="workshop_name" required>
+							</div>
+							<div class="col-3">
+								<label for="iemi_no" class="form-label">IEMI NO : <span class="text-danger">*</span> </label>
+								<input type="text" class="form-control form-control-sm" placeholder="workshop_name" id="iemi_no" name="iemi_no" required>
+							</div>
+							<div class="col-3">
+								<label for="remarks" class="form-label">Remarks : <span class="text-danger">*</span> </label>
+								<input type="text" class="form-control form-control-sm" placeholder="remarks" id="remarks" name="remarks" required>
+							</div>
+
+							<div class="text-center mt-3">
+								<button type="submit" class="btn btn-primary btn-icon-text">
+									Create Data <i class="mdi mdi-file btn-icon-append"></i>
+								</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
+
+
 	</div>
 </div>
 
@@ -29,58 +60,3 @@
 <!-- base:js -->
 <?php include_once('./_includes/footer.php') ?>
 <!-- End custom js for this page-->
-<script>
-	function exportF() {
-		// Get table element
-		var table = document.getElementById("downloadData");
-
-		// Create an HTML table element clone
-		var cloneTable = table.cloneNode(true);
-
-		// Create a new HTML table element
-		var htmlTable = document.createElement('table');
-
-		// Add class to the new HTML table element
-		htmlTable.className = 'table';
-
-		// Append the cloned table to the new table element
-		htmlTable.appendChild(cloneTable);
-
-		// Convert the new HTML table to a string
-		var html = htmlTable.outerHTML;
-
-		// Create a Blob object
-		var blob = new Blob(['\ufeff', html], {
-			type: 'application/vnd.ms-excel'
-		});
-
-		// Create a URL for the Blob object
-		var url = URL.createObjectURL(blob);
-
-		// Create a link element
-		var link = document.createElement('a');
-
-		// Set the href attribute to the URL of the Blob object
-		link.href = url;
-
-		// Set the download attribute to the file name
-		link.download = 'user_list_' + getCurrentDate() + '.xls';
-
-		// Append the link to the document body
-		document.body.appendChild(link);
-
-		// Click the link to trigger the download
-		link.click();
-
-		// Remove the link from the document body
-		document.body.removeChild(link);
-	}
-
-	function getCurrentDate() {
-		var today = new Date();
-		var dd = String(today.getDate()).padStart(2, '0');
-		var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-		var yyyy = today.getFullYear();
-		return yyyy + '-' + mm + '-' + dd;
-	}
-</script>
