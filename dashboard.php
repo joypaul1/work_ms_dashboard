@@ -10,9 +10,9 @@
 						<div class="col-lg-4">
 							<h4 class="card-title">Sales Difference</h4>
 							<canvas id="salesDifference"></canvas>
-							<p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
+							<!-- <p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
 								consectetur adipisicing elit.
-							</p>
+							</p> -->
 						</div>
 						<div class="col-lg-5">
 							<h4 class="card-title">Best Sellers</h4>
@@ -29,9 +29,9 @@
 									<canvas id="bestSellers"></canvas>
 								</div>
 							</div>
-							<p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
+							<!-- <p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
 								consectetur adipisicing elit.
-							</p>
+							</p> -->
 						</div>
 						<div class="col-lg-3">
 							<h4 class="card-title">Social Media Statistics</h4>
@@ -46,16 +46,16 @@
 								</div>
 								<div class="col-sm-12">
 									<ul class="graphl-legend-rectangle">
-										<li><span class="bg-danger"></span>Instagram (15%)</li>
-										<li><span class="bg-warning"></span>Facebook (20%)</li>
-										<li><span class="bg-info"></span>Website (25%)</li>
-										<li><span class="bg-success"></span>Youtube (40%)</li>
+										<li><span class="bg-info"></span>TOTAL USER (15%)</li>
+										<li><span class="bg-success"></span>ACTIVE USER (20%)</li>
+										<li><span class="bg-danger"></span>INACTIVE USER (25%)</li>
+										<!-- <li><span class="bg-success"></span>Youtube (40%)</li> -->
 									</ul>
 								</div>
 							</div>
-							<p class="mb-0 mt-2">Lorem ipsum dolor sit amet,
+							<!-- <p class="mb-0 mt-2">Lorem ipsum dolor sit amet,
 								consectetur adipisicing elit.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
