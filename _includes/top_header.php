@@ -128,10 +128,10 @@
                                 <img src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="profile" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
+                                <!-- <a class="dropdown-item">
                                     <i class="mdi mdi-settings text-primary"></i>
                                     Settings
-                                </a>
+                                </a> -->
                                 <a href="<?php echo $wkshopBasePath ?>/index.php?logout_hr=true" class="dropdown-item">
                                     <i class="mdi mdi-logout text-primary"></i>
                                     Logout
