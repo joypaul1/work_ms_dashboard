@@ -36,7 +36,7 @@
 }
 
 .content-wrapper {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   @include make-container();
   min-height: calc(100vh - #{$horizontal-navbar-height} - #{$footer-height});
   @include flex-grow(1);

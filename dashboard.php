@@ -3,7 +3,7 @@
 
 <div class="content-wrapper">
 	<div class="row">
-		<div class="col-lg-8 grid-margin stretch-card">
+		<div class=" grid-margin stretch-card">
 			<div class="card">
 				<div class="card-body">
 					<div class="row">
@@ -96,19 +96,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 mb-3 mb-lg-0">
+		<!-- <div class="col-lg-4 mb-3 mb-lg-0">
 			<div class="card congratulation-bg text-center">
 				<div class="card-body pb-0">
 					<img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png" alt="">
 					<h2 class="mt-3 text-white mb-3 font-weight-bold">Congratulations
 						<?php echo $_SESSION['USER_WK_ADMIN']['name'] ?>
 					</h2>
-					<!-- <p>You have done 57.6% more sales today.
-						Check your new badge in your profile.
-					</p> -->
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- <div class="row">
 		<div class="col-sm-8 flex-column d-flex stretch-card">
