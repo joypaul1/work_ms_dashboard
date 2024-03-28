@@ -5,9 +5,9 @@
             <div class="container-fluid">
                 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between">
                     <ul class="navbar-nav navbar-nav-left">
-                        <li class="nav-item ms-0 me-5 d-lg-flex d-none">
+                        <!-- <li class="nav-item ms-0 me-5 d-lg-flex d-none">
                             <a href="#" class="nav-link horizontal-nav-left-menu"><i class="mdi mdi-format-list-bulleted"></i></a>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                                 <i class="mdi mdi-bell mx-0"></i>
