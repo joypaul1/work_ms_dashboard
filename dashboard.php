@@ -33,22 +33,41 @@
 								consectetur adipisicing elit.
 							</p> -->
 						</div>
+						<?php
+
+						$strSQL  = oci_parse(
+							$objConnect,
+							"SELECT
+							COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' AND IS_ACTIVE = 1 THEN 1 END) AS ACTIVE_USER,
+							COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' AND IS_ACTIVE = 0 THEN 1 END) AS DEACTIVE_USER,
+							COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' THEN 1 END) AS TOTAL_USER,
+							ROUND(
+								COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' AND IS_ACTIVE = 1 THEN 1 END) * 100.0 / 	COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' THEN 1 END), 2) AS ACTIVE_USER_PERCENTAGE,
+    						ROUND(
+								COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' AND IS_ACTIVE = 0 THEN 1 END) * 100.0 / COUNT(CASE WHEN ACCESS_APP='RML_WSHOP' THEN 1 END), 2) AS DEACTIVE_USER_PERCENTAGE
+							FROM  DEVELOPERS.RML_COLL_APPS_USER"
+						);
+						oci_execute($strSQL);
+						$number = 0;
+
+
+						while ($userRow = oci_fetch_assoc($strSQL)) {
+							$number++;
+						?>
 						<div class="col-lg-3">
-							<h4 class="card-title">Social Media Statistics</h4>
+							<h4 class="card-title">COLL. APP USER </h4>
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="progress progress-lg grouped mb-2">
-										<div class="progress-bar  bg-danger" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar  bg-success" role="progressbar" style="width:<?= $userRow['ACTIVE_USER_PERCENTAGE']?>%" aria-valuenow="<?= $userRow['ACTIVE_USER_PERCENTAGE']?>" aria-valuemin="0" aria-valuemax="100"></div>
+										<div class="progress-bar bg-danger" role="progressbar" style="width:<?= $userRow['DEACTIVE_USER_PERCENTAGE']?>%" aria-valuenow="<?= $userRow['DEACTIVE_USER_PERCENTAGE']?>" aria-valuemin="0" aria-valuemax="100"></div>
 									</div>
 								</div>
 								<div class="col-sm-12">
 									<ul class="graphl-legend-rectangle">
-										<li><span class="bg-info"></span>TOTAL USER (15%)</li>
-										<li><span class="bg-success"></span>ACTIVE USER (20%)</li>
-										<li><span class="bg-danger"></span>INACTIVE USER (25%)</li>
+										<li><span class="bg-info"></span>TOTAL USER (<?= $userRow['TOTAL_USER']?>)</li>
+										<li><span class="bg-success"></span>ACTIVE USER (<?= $userRow['ACTIVE_USER']?>)</li>
+										<li><span class="bg-danger"></span>INACTIVE USER (<?= $userRow['DEACTIVE_USER']?>)</li>
 										<!-- <li><span class="bg-success"></span>Youtube (40%)</li> -->
 									</ul>
 								</div>
@@ -57,6 +76,7 @@
 								consectetur adipisicing elit.
 							</p> -->
 						</div>
+						<?php }?>
 					</div>
 				</div>
 			</div>

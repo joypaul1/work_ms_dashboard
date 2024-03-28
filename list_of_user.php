@@ -50,7 +50,7 @@
 											REMARKS,
 											UPDATED_BY
 									FROM  RML_COLL_APPS_USER A
-									WHERE ACCESS_APP='RML_WSHOP' 
+									WHERE ACCESS_APP='RML_WSHOP'
 									ORDER BY IS_ACTIVE"
 								);
 								oci_execute($strSQL);
