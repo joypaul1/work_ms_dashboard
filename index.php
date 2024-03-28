@@ -40,8 +40,6 @@ if (isset($_GET['logout_hr']) && $_GET['logout_hr'] == true) {
 
 ?>
 
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
