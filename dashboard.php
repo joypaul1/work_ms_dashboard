@@ -110,7 +110,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-sm-8 flex-column d-flex stretch-card">
 			<div class="row">
 				<div class="col-lg-4 d-flex grid-margin stretch-card">
@@ -415,7 +415,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <!-- content-wrapper ends -->
