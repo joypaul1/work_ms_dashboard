@@ -7,14 +7,30 @@
 			<div class="card">
 				<div class="card-body">
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-8 d-flex grid-margin stretch-card">
+							<div class="card sale-diffrence-border">
+								<div class="card-header font-weight-bold text-center text-info" style="font-weight: bold;font-size: 20px;"><span class="mdi mdi-cloud-download-outline"></span> Apps Download Link: </div>
+								<div class="card-body">
+									<h5 class="text-success mb-2">
+										<span class="mdi mdi-arrow-decision-auto fwo-bold"></span>
+										<strong>
+											<a href="http://202.40.181.98:9090/rangs_workshoop_rml/ws.apk"> http://202.40.181.98:9090/rangs_workshoop_rml/ws.apk
+											</a>
+										</strong>
+									</h5>
+									<p class="card-title mb-2 ">
+										<span class="mdi mdi-arrow-right-bold-hexagon-outline"></span>
+										Apps Default Password = 555
+									</p>
+									<!-- <small class="text-muted">APRIL 2019</small> -->
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-lg-4">
 							<h4 class="card-title">Sales Difference</h4>
 							<canvas id="salesDifference"></canvas>
-							<!-- <p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
-								consectetur adipisicing elit.
-							</p> -->
-						</div>
-						<div class="col-lg-5">
+						</div> -->
+						<!-- <div class="col-lg-5">
 							<h4 class="card-title">Best Sellers</h4>
 							<div class="row">
 								<div class="col-sm-4">
@@ -29,10 +45,8 @@
 									<canvas id="bestSellers"></canvas>
 								</div>
 							</div>
-							<!-- <p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
-								consectetur adipisicing elit.
-							</p> -->
-						</div>
+							
+						</div> -->
 						<?php
 
 						$strSQL  = oci_parse(
@@ -54,29 +68,30 @@
 						while ($userRow = oci_fetch_assoc($strSQL)) {
 							$number++;
 						?>
-						<div class="col-lg-3">
-							<h4 class="card-title">COLL. APP USER </h4>
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="progress progress-lg grouped mb-2">
-										<div class="progress-bar  bg-success" role="progressbar" style="width:<?= $userRow['ACTIVE_USER_PERCENTAGE']?>%" aria-valuenow="<?= $userRow['ACTIVE_USER_PERCENTAGE']?>" aria-valuemin="0" aria-valuemax="100"></div>
-										<div class="progress-bar bg-danger" role="progressbar" style="width:<?= $userRow['DEACTIVE_USER_PERCENTAGE']?>%" aria-valuenow="<?= $userRow['DEACTIVE_USER_PERCENTAGE']?>" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="col-lg-3">
+								<h4 class="card-title">COLL. APP USER </h4>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="progress progress-lg grouped mb-2">
+											<div class="progress-bar  bg-success" role="progressbar" style="width:<?= $userRow['ACTIVE_USER_PERCENTAGE'] ?>%" aria-valuenow="<?= $userRow['ACTIVE_USER_PERCENTAGE'] ?>" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar bg-danger" role="progressbar" style="width:<?= $userRow['DEACTIVE_USER_PERCENTAGE'] ?>%" aria-valuenow="<?= $userRow['DEACTIVE_USER_PERCENTAGE'] ?>" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<ul class="graphl-legend-rectangle">
+											<li><span class="bg-info"></span>TOTAL USER (<?= $userRow['TOTAL_USER'] ?>)</li>
+											<li><span class="bg-success"></span>ACTIVE USER (<?= $userRow['ACTIVE_USER'] ?>)</li>
+											<li><span class="bg-danger"></span>INACTIVE USER (<?= $userRow['DEACTIVE_USER'] ?>)</li>
+											<!-- <li><span class="bg-success"></span>Youtube (40%)</li> -->
+										</ul>
 									</div>
 								</div>
-								<div class="col-sm-12">
-									<ul class="graphl-legend-rectangle">
-										<li><span class="bg-info"></span>TOTAL USER (<?= $userRow['TOTAL_USER']?>)</li>
-										<li><span class="bg-success"></span>ACTIVE USER (<?= $userRow['ACTIVE_USER']?>)</li>
-										<li><span class="bg-danger"></span>INACTIVE USER (<?= $userRow['DEACTIVE_USER']?>)</li>
-										<!-- <li><span class="bg-success"></span>Youtube (40%)</li> -->
-									</ul>
-								</div>
-							</div>
-							<!-- <p class="mb-0 mt-2">Lorem ipsum dolor sit amet,
+								<!-- <p class="mb-0 mt-2">Lorem ipsum dolor sit amet,
 								consectetur adipisicing elit.
 							</p> -->
-						</div>
-						<?php }?>
+							</div>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
@@ -95,7 +110,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="row">
+	<div class="row">
 		<div class="col-sm-8 flex-column d-flex stretch-card">
 			<div class="row">
 				<div class="col-lg-4 d-flex grid-margin stretch-card">
@@ -400,7 +415,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </div>
 
 <!-- content-wrapper ends -->
